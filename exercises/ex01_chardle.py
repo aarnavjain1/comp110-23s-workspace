@@ -22,7 +22,7 @@ if (single_character_guess == five_character_word[1]):
 if (single_character_guess == five_character_word[2]):
     number_of_instances = number_of_instances + 1
     print(single_character_guess + " found at index 2")
-if(single_character_guess == five_character_word[3]):
+if (single_character_guess == five_character_word[3]):
     number_of_instances = number_of_instances + 1
     print(single_character_guess + " found at index 3")
 if (single_character_guess == five_character_word[4]):
@@ -36,13 +36,13 @@ else:
         print("1 instance of " + single_character_guess + " found in " + five_character_word)
     else:
         if number_of_instances == 2:
-            print("2 instance of " + single_character_guess + " found in " + five_character_word)
+            print("2 instances of " + single_character_guess + " found in " + five_character_word)
         else:
             if number_of_instances == 3:
-                print("3 instance of " + single_character_guess + " found in " + five_character_word)
+                print("3 instances of " + single_character_guess + " found in " + five_character_word)
             else:
                 if number_of_instances == 4:
-                    print("4 instance of " + single_character_guess + " found in " + five_character_word)
+                    print("4 instances of " + single_character_guess + " found in " + five_character_word)
                 else:
                     if number_of_instances == 5:
-                        print("5 instance of " + single_character_guess + " found in " + five_character_word)
+                        print("5 instances of " + single_character_guess + " found in " + five_character_word)
