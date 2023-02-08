@@ -42,4 +42,3 @@ while index<len(secret_word):
     guessed_character=False
     index_1=0
 print(emoji_color)
-
