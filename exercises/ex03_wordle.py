@@ -1,4 +1,4 @@
-""""EX03 - Structured Wordle."""
+"""EX03 - Structured Wordle."""
 
 __author__ = "730384690"
 
@@ -10,7 +10,7 @@ def contains_char(word: str, single_char: str) -> bool:
             return True
         else:
             index = index + 1
-        return False
+    return False
 
 WHITE_BOX: str = "\U00002B1C"
 GREEN_BOX: str = "\U0001F7E9"
@@ -34,24 +34,26 @@ def emojified(guess: str, secret: str) -> str:
 def input_guess(length: int) -> str:
     guess: str = input(f"Enter a {length} character word: ")
     while len(guess) != length:
-        guess = input(f"That wasn't {length} char! Try again: ")
+        guess = input(f"That wasn't {length} chars! Try again: ")
     return guess
 
 def main() -> None:
     """The entrypoint of the program and main game loop."""
-secret_word: str = "codes"
-turns: int = 0
-game_flow: bool = True
-while game_flow and turns < 7:
-    guess: str = input_guess(5)
-    print(emojified(guess, secret_word))
-    if secret_word == guess:
-        print(f"You won in {turns}/6 turns!")
-        game_flow = False
-    if turns > 6:
-        print("X/6 - Sorry, try again tomorrow!")
-        game_flow == False
-    turns = turns + 1
+    secret_word: str = "codes"
+    turns: int = 1
+    game_flow: bool = True
+    while game_flow and turns < 7:
+        print(f"=== Turn {turns}/6 ===")
+        guess: str = input_guess(5)
+        print(emojified(guess, secret_word))
+        if secret_word == guess:
+            print(f"You won in {turns}/6 turns!")
+            game_flow = False
+        else: 
+            if turns == 6:
+                print("X/6 - Sorry, try again tomorrow!")
+                game_flow == False
+        turns = turns + 1
 
 if __name__ == "__main__":
     main()
